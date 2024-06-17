@@ -30,6 +30,7 @@ public class JDBCTemplate {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/menudb", "ohgiraffers", "ohgiraffers");
+//            con = DriverManager.getConnection(url, con);
 
 
         } catch (SQLException e) {
@@ -48,4 +49,21 @@ public class JDBCTemplate {
     }
 
     // 커넥션을 닫아주는 메소드
+
+    public static void close (Connection con) {
+
+        try{
+        if(con != null && !con.isClosed()) {
+            con.close();
+        }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+
+    }
+
 }
