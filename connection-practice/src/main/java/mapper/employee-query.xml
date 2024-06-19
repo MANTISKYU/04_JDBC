@@ -21,11 +21,33 @@
         )
         values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)
 
+    </entry>
+    <entry key="updateEmployee">
+
+        update employee
+        set emp_id = ?
+        emp_name = ?,
+        emp_no = ?,
+        email =?,
+        phone =?,
+        dept_code =?,
+        job_code =?,
+        sal_level =?,
+        salary =?,
+        bonus =?,
+        manager_id =?,
+        hire_date =?,
+        ent_date =?,
+        ent_yn =?
+        where emp_id = ?
 
 
+    </entry>
 
-
-
+    <entry key="deleteEmployee">
+        delete
+        from employee
+        where emp_id = ?
 
     </entry>
 
